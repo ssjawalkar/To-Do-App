@@ -4,11 +4,35 @@
     <title>
         <%= title %>
     </title>
-
+    <link rel="stylesheet" href="/css/layout.css">
 </head>
 
 <body>
-    <h1>To Do</h1>>
+    <div class="heading_name">
+        <h1>To Do</h1>
+    </div>
+    <div class="main">
+
+        <form action="/ToDO_create" method="POST">
+            <div class="inputtext">
+                <input type="text" name="notes" placeholder="Note TO DO" style="height:50px; width:500px;"
+                    required><br><br>
+            </div>
+            <div class="input_extra">
+                <select id="priority" name="priority" class="red" style="width: 130px; "
+                    onchange="this.className=this.options[this.selectedIndex].className">
+                    <option class="red" value="Red" style="background-color: Red;">Red</option>
+                    <option class="orange" value="Orange" style="background-color: orange;">Orange</option>
+                    <option class="green" value="Green" style="background-color: green;">Green</option>
+                </select>
+                <input type="date" id="start" name="date" value="2018-07-22" min="2018-01-01" max="2018-12-31"
+                    style="width: 18    0px;">
+            </div>
+            <br>
+            <div class=" submit">
+                <input type="submit" value="Update">
+            </div>
+    </div>
 </body>
 
 </html>

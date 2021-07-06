@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const todo_list_schema = new mongoose.Schema({
-    title: {
+    notes: {
         type: String,
         required: true,
         unique: true
@@ -10,7 +10,7 @@ const todo_list_schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    category: {
+    priority: {
         type: String,
         required: true
     }
