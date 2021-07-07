@@ -9,7 +9,7 @@
 
 <body>
     <div class="heading_name">
-        <h1>To Do</h1>
+        <h1 class="neonText">To Do</h1>
     </div>
     <div class="main_input">
 
@@ -25,8 +25,8 @@
                     <option class="orange" value="Orange" style="background-color: orange;">Orange</option>
                     <option class="green" value="Green" style="background-color: green;">Green</option>
                 </select>
-                <input type="date" id="start" name="date" value="2018-07-22" min="2018-01-01" max="2018-12-31"
-                    style="width: 18    0px;">
+                <input type="date" id="start" name="date" value=<%=today_date %> min=<%= today_date %>
+                    style="width:180px;">
             </div>
             <br>
             <div class=" submit">
@@ -36,7 +36,28 @@
 
     <div class="note_contents">
 
-    </div>
+        <div class="contents red neonText">
+            <div class="notes-info ">
+                <p>Samihan Jawalkar</p>
+            </div>
+            <div class="date-info">
+                <p> 11 aug </p>
+            </div>
+
+        </div>
+
+
+
+        <div class="contents green neonText">
+            <div class="notes-info">
+                <p>Samihan Jawalkar</p>
+            </div>
+            <div class="date-info">
+                <p> 11 aug </p>
+            </div>
+
+        </div>
+
 </body>
 
 </html>

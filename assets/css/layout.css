@@ -1,24 +1,54 @@
 body {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-      217deg,
-      rgba(255, 0, 0, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  background-color: #010a01;
+  font-family: "Sacramento", sans-serif;
+  background-color: #010a01;
+  display: flex;
+  flex-direction: column;
+  }
+
+
+
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    /* White glow */
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    /* Green glow */
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
 }
 
 .heading_name {
   width: 100%;
-  height: 10%;
+  height: 16%;
 }
 .heading_name h1 {
   width: 100%;
   height: 100%;
   font-size: xxx-large;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
   color: cyan;
   text-align: center;
 }
@@ -63,22 +93,99 @@ body {
   justify-content: space-around;
 }
 .green {
-  background-color: green;
+  background-color: #CCFF00  ;
 }
 
 .orange {
-  background-color: orange;
+  background-color: #FA5B3D;
 }
 
 .red {
-  background-color: red;
+  background-color: #FF355E
+  ;
 }
 
 .note_contents {
   width: 100%;
-  height: 50%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+
+  text-align: center;
+  font-size: 2rem;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+}
+
+
+.note_contents .contents {
+  width: 50%;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+
+  text-align: center;
+  font-size: 1rem;
+  animation: pulsate 1.5s infinite alternate;  
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+}
+
+.contents:hover {
+  background-color: blue:
+}
+.note_contents .contents .notes-info {
+  width: 30%;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  border: 1px palegoldenrod;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.note_contents .contents .date-info {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 20px;
+}
+
+@keyframes pulsate {
+    
+  100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #bc13fe,
+      0 0 80px #bc13fe,
+      0 0 90px #bc13fe,
+      0 0 100px #bc13fe,
+      0 0 150px #bc13fe;
+  
+  }
+  
+  0% {
+
+    text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #bc13fe,
+    0 0 45px #bc13fe,
+    0 0 55px #bc13fe,
+    0 0 70px #bc13fe,
+    0 0 80px #bc13fe;
+
 }
