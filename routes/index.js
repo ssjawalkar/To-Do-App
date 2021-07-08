@@ -13,4 +13,6 @@ router.get('/', TodoController.home);
 
 router.post("/ToDO_create",TodoController.create_todo)
 
+router.get('/delete-todo/', TodoController.deleteTODO);
+
 module.exports = router;

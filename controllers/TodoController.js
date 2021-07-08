@@ -29,3 +29,16 @@ module.exports.create_todo = function(req,res){
         return res.redirect('back');
     })
 }
+
+module.exports.deleteTODO = function(req,res){
+    console.log(req.query)
+    let id = req.query.id
+    todo_list.findOneAndDelete(id, function(err) {
+        if(err){
+            console.log('error in deleting the object');
+            return;
+        }
+        return res.redirect('back');
+    });
+
+}

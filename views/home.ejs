@@ -27,7 +27,7 @@
                     <option class="green" value="Green" style="background-color: green;">Green</option>
                 </select>
                 <input type="date" id="start" name="date" value=<%=today_date %> min=<%= today_date %>
-                    style="width:180px;">
+                    style="width:180px;" required>
             </div>
             <br>
             <div class="submit">
@@ -50,7 +50,10 @@
                     </p>
                 </div>
                 <div class="cross">
-                    <p>&#10007;</p>
+                    <a href="/delete-todo/?id=<%= todo_inst._id %>">
+                        &#10003;
+                    </a>
+
                 </div>
 
             </div>
