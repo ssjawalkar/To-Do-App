@@ -5,6 +5,7 @@
         <%= title %>
     </title>
     <link rel="stylesheet" href="/css/layout.css">
+
 </head>
 
 <body>
@@ -29,35 +30,32 @@
                     style="width:180px;">
             </div>
             <br>
-            <div class=" submit">
+            <div class="submit">
                 <input type="submit" value="Update">
             </div>
     </div>
 
     <div class="note_contents">
 
-        <div class="contents red neonText">
-            <div class="notes-info ">
-                <p>Samihan Jawalkar</p>
+        <% todo_obj.forEach(function (todo_inst) { %>
+            <div class="contents <%= todo_inst.priority %> neonText">
+                <div class="notes-info">
+                    <p>
+                        <%= todo_inst.notes %>
+                    </p>
+                </div>
+                <div class="date-info">
+                    <p>
+                        <%= todo_inst.date %>
+                    </p>
+                </div>
+                <div class="cross">
+                    <p>&#10007;</p>
+                </div>
+
             </div>
-            <div class="date-info">
-                <p> 11 aug </p>
-            </div>
-
-        </div>
-
-
-
-        <div class="contents green neonText">
-            <div class="notes-info">
-                <p>Samihan Jawalkar</p>
-            </div>
-            <div class="date-info">
-                <p> 11 aug </p>
-            </div>
-
-        </div>
-
+            <% }) %>
+    </div>
 </body>
 
 </html>

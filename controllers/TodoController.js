@@ -5,10 +5,18 @@ module.exports.home = function(req, res){
     //res.cookie('user_id', 25);
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    return res.render('home', {
-        title: "Home",
-        today_date : String(date)
+
+    todo_list.find({}, function(err, data){
+
+        return res.render('home', {
+            title: "Home",
+            today_date : String(date),
+            todo_obj:data
+        });
+
     });
+
+    
 }
 
 // module.exports.actionName = function(req, res){}
