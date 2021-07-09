@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const todo_list_schema = new mongoose.Schema({
     notes: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     date: {
         type: String,

@@ -1,3 +1,4 @@
+//importing required libraries
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
@@ -9,6 +10,7 @@ app.use(express.urlencoded());
 
 app.use(cookieParser());
 
+//setting static to assets
 app.use(express.static('./assets'));
 
 //app.use(expressLayouts);
@@ -24,7 +26,7 @@ app.use('/', require('./routes'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-
+//listening
 app.listen(port, function(err){
     if (err){
         console.log(`Error in running the server: ${err}`);

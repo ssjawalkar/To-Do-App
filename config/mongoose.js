@@ -2,6 +2,12 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/Todo_DB');
 
+//removing warning, for lower mongodb version
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+
+
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, "Error connecting to MongoDB"));

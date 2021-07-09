@@ -4,6 +4,7 @@
     <title>
         <%= title %>
     </title>
+    <!-- calling css file -->
     <link rel="stylesheet" href="/css/layout.css">
 
 </head>
@@ -13,19 +14,21 @@
         <h1 class="neonText">To Do</h1>
     </div>
     <div class="main_input">
-
+        <!-- calling todo_creat which would create data which would be send -->
         <form action="/ToDO_create" method="POST">
             <div class="inputtext">
                 <input type="text" name="notes" placeholder="Note TO DO" style="height:50px; width:500px;"
                     required><br><br>
             </div>
             <div class="input_extra">
+                <!-- setting color name and background-color same -->
                 <select id="priority" name="priority" class="red" style="width: 130px; "
                     onchange="this.className=this.options[this.selectedIndex].className">
                     <option class="red" value="Red" style="background-color: Red;">Red</option>
                     <option class="orange" value="Orange" style="background-color: orange;">Orange</option>
                     <option class="green" value="Green" style="background-color: green;">Green</option>
                 </select>
+                <!-- setting min date as today -->
                 <input type="date" id="start" name="date" value=<%=today_date %> min=<%= today_date %>
                     style="width:180px;" required>
             </div>
@@ -36,7 +39,7 @@
     </div>
 
     <div class="note_contents">
-
+        <!-- ejs for loop -->
         <% todo_obj.forEach(function (todo_inst) { %>
             <div class="contents <%= todo_inst.priority %> neonText">
                 <div class="notes-info">
@@ -50,6 +53,7 @@
                     </p>
                 </div>
                 <div class="cross">
+                    <!-- calling delete when press cross -->
                     <a href="/delete-todo/?id=<%= todo_inst._id %>">
                         &#10003;
                     </a>
