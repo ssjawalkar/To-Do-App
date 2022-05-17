@@ -8,7 +8,8 @@ In this project, I have developed a web application called ‘TO DO’. This app
 
 
 Below are few ScreenShots of the Webapp:
-![Alt Text](./media/Home.png)
+![Alt Text](./media/Home.gif)
+
 
 
 ## Tech/framework used
