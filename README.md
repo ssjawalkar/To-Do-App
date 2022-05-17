@@ -7,7 +7,7 @@
 In this project, I have developed a web application called ‘TO DO’. This application would be use to create note which we need to do. We can priotise the task using color. User would be able to delete the task, once he has completed that task.
 
 
-Below are few ScreenShots of the Webapp:
+Demo
 ![Alt Text](./media/Home.gif)
 
 
